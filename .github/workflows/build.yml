@@ -21,7 +21,7 @@ jobs:
         id: buildx
 
       - name: Cache Docker Image Layers
-        uses: action/cache@v2
+        uses: actions/cache@v2
         with:
           path: /tmp/.buildx-cache
           key: ${{ runner.os}}-buildx-${{ github.sha }}
