@@ -26,7 +26,7 @@ jobs:
         with:
           context: ./
           file: ./Dockerfile
-          builder: ${{step.buildx.outputs.name }}
+          builder: ${{steps.buildx.outputs.name }}
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/demo-docker
 
